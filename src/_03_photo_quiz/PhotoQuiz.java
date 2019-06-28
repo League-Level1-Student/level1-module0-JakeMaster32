@@ -4,7 +4,9 @@ package _03_photo_quiz;
  *    Level 1
  */
 
+
 import java.awt.Component;
+import java.awt.Dimension;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -28,19 +30,21 @@ public class PhotoQuiz {
 		// “Copy Image Address”)
 
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component image = createImage("http://pngimg.com/uploads/spongebob/spongebob_PNG44.png");
 		// 3. use the "createImage()" method below to initialize your Component
-
+quizWindow.setPreferredSize(new Dimension(500, 500));
 		// 4. add the image to the quiz window
-
+		quizWindow.add(image);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
+		}
 		// 6. ask a question that relates to the image
-
+		
 		// 7. print "CORRECT" if the user gave the right answer
-
+		
 		// 8. print "INCORRECT" if the answer is wrong
-
+		 
+			
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
 
@@ -55,7 +59,7 @@ public class PhotoQuiz {
 
 		// 14+ check answer, say if correct or incorrect, etc.
 
-	}
+	
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);
