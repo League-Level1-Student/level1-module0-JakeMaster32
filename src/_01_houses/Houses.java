@@ -27,15 +27,17 @@ public class Houses {
 			} else {
 				height = "large";
 			}
-			drawHouse(height);
+			
+			Color c = new Color(rand.nextInt(256),rand.nextInt(256),rand.nextInt(256));
+			drawHouse(height, c);
 		}
 
 	}
 
 	static int size1 = 60;
 
-	static void drawHouse(String height) {
-		bob.setPenColor(Color.red);
+	static void drawHouse(String height, Color c) {
+		bob.setPenColor(c);
 		if (height.equals("small")) {
 			size1 = 60; drawflatroof();
 		} else if (height.equals("medium")) {
